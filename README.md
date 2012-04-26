@@ -2,7 +2,8 @@ coffee-processing-live
 ======================
 
 A simple Sinatra demo app where you can see live previews of processing sketches written in CoffeeScript.
-Complies CoffeeScript at server side using coffee-processing gem.
+Complies CoffeeScript at server side using
+[coffee-processing](https://github.com/junegunn/coffee-processing) gem.
 But it would be better if it's done at client side. (TODO)
 
 Server code
@@ -27,6 +28,6 @@ Usage
 -----
 
 ```
-ruby coffee-processing.live.rb
+ruby coffee-processing-live.rb
 ```
 
