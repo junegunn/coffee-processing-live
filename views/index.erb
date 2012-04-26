@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>
+      live-coffee-processing
+    </title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' type='text/javascript'></script>
+    <script src='https://raw.github.com/processing-js/processing-js/master/processing.js' type='text/javascript'></script>
+    <script src='http://coffeescript.org/extras/coffee-script.js' type='text/javascript'></script>
+    <script src='/js/site.js' type='text/javascript'></script>
+    <link rel='stylesheet' href='/css/style.css' type='text/css' />
+  </head>
+  <body>
+    <div id='left'>
+      <div>
+        <textarea>setup = ->
+  size $(window).width(), $(window).height()
+  frameRate 30
+  background 255
+  strokeWeight 3
+
+draw = ->
+  for i in [0...5]
+    s = random(100)
+    stroke random(255), random(255), random(255)
+    ellipse random(width()), random(height()), s, s</textarea>
+        <button id='run'>start</button>
+        <button id='apply'>apply</button>
+        <button id='stop'>stop</button>
+      </div>
+    </div>
+    <div id='right'>
+      <canvas></canvas>
+    </div>
+  </body>
+</html>
