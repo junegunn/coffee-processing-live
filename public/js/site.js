@@ -1,5 +1,6 @@
 $(function() {
   window.p5 = null;
+  canvas = $("canvas")[0]
 
   $("#run").click(function() {
     $.ajax({
@@ -9,7 +10,7 @@ $(function() {
       success: function(data) {
         if (window.p5) window.p5.exit()
         eval(data)
-        window.p5 = new Processing($("canvas")[0], this.sketch)
+        window.p5 = new Processing(canvas, this.sketch)
       }
     })
   })
@@ -26,7 +27,7 @@ $(function() {
           this.sketch(window.p5)
           window.p5.loop()
         } else {
-          window.p5 = new Processing($("canvas")[0], this.sketch)
+          window.p5 = new Processing(canvas, this.sketch)
         }
       }
     })
@@ -34,5 +35,9 @@ $(function() {
 
   $("#stop").click(function() {
     if (window.p5) window.p5.noLoop()
+  })
+
+  $("#capture").click(function() {
+    window.open(canvas.toDataURL("image/png"), '_blank')
   })
 })
