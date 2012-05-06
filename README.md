@@ -31,3 +31,7 @@ Usage
 ruby coffee-processing-live.rb
 ```
 
+Online demo
+-----------
+http://coffee-processing-live.heroku.com/
+
