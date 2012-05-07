@@ -19,7 +19,7 @@ $(function() {
     $.ajax({
       url: '/',
       type: 'POST',
-      data: { code: $("#left textarea").val() },
+      data: { code: window.editor.getValue() },
       success: function(data) {
         if (window.p5) {
           window.p5.noLoop()

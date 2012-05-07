@@ -9,8 +9,6 @@ body {
   top:                 0;
   left:                0;
   width:               500;
-  height:              600;
-  border:              1px grey dashed;
 
   background-color:    #ffffff;
   opacity:             0.8;
@@ -22,7 +20,7 @@ body {
 }
 
 #left div {
-  margin: 1em;
+  /*margin: 1em;*/
 }
 
 #left textarea {
